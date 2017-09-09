@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryClient.Web.Static", "MemoryClient.Web\MemoryClient.Web.Static.csproj", "{B6F9A19C-48B2-41B3-A345-8FD860B510E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryClient.Web.Functions", "MemoryClient.Web.Functions\MemoryClient.Web.Functions.csproj", "{C19A8762-04D3-446F-A924-44C89BF1E7D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryClient.Xamarin", "MemoryClient.Xamarin\MemoryClient.Xamarin\MemoryClient.Xamarin.csproj", "{11FA8A59-DA62-463A-A1F8-AB82D7EB1853}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryClient.Xamarin.Android", "MemoryClient.Xamarin\MemoryClient.Xamarin.Android\MemoryClient.Xamarin.Android.csproj", "{42D91F65-7CD6-4BE3-A94C-BFE315653F58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryClient.Xamarin.iOS", "MemoryClient.Xamarin\MemoryClient.Xamarin.iOS\MemoryClient.Xamarin.iOS.csproj", "{F065ED64-3C7A-48A7-A859-77B5EF34A652}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryClient.Xamarin.UWP", "MemoryClient.Xamarin\MemoryClient.Xamarin.UWP\MemoryClient.Xamarin.UWP.csproj", "{69C8A268-17B5-4EAC-A9EB-450F75A3CDF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		MemoryApi|Any CPU = MemoryApi|Any CPU
+		MemoryClient.Web-Release|Any CPU = MemoryClient.Web-Release|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6F9A19C-48B2-41B3-A345-8FD860B510E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6F9A19C-48B2-41B3-A345-8FD860B510E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6F9A19C-48B2-41B3-A345-8FD860B510E6}.MemoryApi|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6F9A19C-48B2-41B3-A345-8FD860B510E6}.MemoryApi|Any CPU.Build.0 = Debug|Any CPU
+		{B6F9A19C-48B2-41B3-A345-8FD860B510E6}.MemoryClient.Web-Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6F9A19C-48B2-41B3-A345-8FD860B510E6}.MemoryClient.Web-Release|Any CPU.Build.0 = Release|Any CPU
+		{B6F9A19C-48B2-41B3-A345-8FD860B510E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6F9A19C-48B2-41B3-A345-8FD860B510E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C19A8762-04D3-446F-A924-44C89BF1E7D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C19A8762-04D3-446F-A924-44C89BF1E7D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C19A8762-04D3-446F-A924-44C89BF1E7D1}.MemoryApi|Any CPU.ActiveCfg = MemoryApi|Any CPU
+		{C19A8762-04D3-446F-A924-44C89BF1E7D1}.MemoryApi|Any CPU.Build.0 = MemoryApi|Any CPU
+		{C19A8762-04D3-446F-A924-44C89BF1E7D1}.MemoryClient.Web-Release|Any CPU.ActiveCfg = MemoryClient.Web-Release|Any CPU
+		{C19A8762-04D3-446F-A924-44C89BF1E7D1}.MemoryClient.Web-Release|Any CPU.Build.0 = MemoryClient.Web-Release|Any CPU
+		{C19A8762-04D3-446F-A924-44C89BF1E7D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C19A8762-04D3-446F-A924-44C89BF1E7D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11FA8A59-DA62-463A-A1F8-AB82D7EB1853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11FA8A59-DA62-463A-A1F8-AB82D7EB1853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11FA8A59-DA62-463A-A1F8-AB82D7EB1853}.MemoryApi|Any CPU.ActiveCfg = MemoryApi|Any CPU
+		{11FA8A59-DA62-463A-A1F8-AB82D7EB1853}.MemoryApi|Any CPU.Build.0 = MemoryApi|Any CPU
+		{11FA8A59-DA62-463A-A1F8-AB82D7EB1853}.MemoryClient.Web-Release|Any CPU.ActiveCfg = MemoryClient.Web-Release|Any CPU
+		{11FA8A59-DA62-463A-A1F8-AB82D7EB1853}.MemoryClient.Web-Release|Any CPU.Build.0 = MemoryClient.Web-Release|Any CPU
+		{11FA8A59-DA62-463A-A1F8-AB82D7EB1853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11FA8A59-DA62-463A-A1F8-AB82D7EB1853}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42D91F65-7CD6-4BE3-A94C-BFE315653F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D91F65-7CD6-4BE3-A94C-BFE315653F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D91F65-7CD6-4BE3-A94C-BFE315653F58}.MemoryApi|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D91F65-7CD6-4BE3-A94C-BFE315653F58}.MemoryApi|Any CPU.Build.0 = Debug|Any CPU
+		{42D91F65-7CD6-4BE3-A94C-BFE315653F58}.MemoryClient.Web-Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D91F65-7CD6-4BE3-A94C-BFE315653F58}.MemoryClient.Web-Release|Any CPU.Build.0 = Release|Any CPU
+		{42D91F65-7CD6-4BE3-A94C-BFE315653F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D91F65-7CD6-4BE3-A94C-BFE315653F58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F065ED64-3C7A-48A7-A859-77B5EF34A652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F065ED64-3C7A-48A7-A859-77B5EF34A652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F065ED64-3C7A-48A7-A859-77B5EF34A652}.MemoryApi|Any CPU.ActiveCfg = MemoryApi|Any CPU
+		{F065ED64-3C7A-48A7-A859-77B5EF34A652}.MemoryApi|Any CPU.Build.0 = MemoryApi|Any CPU
+		{F065ED64-3C7A-48A7-A859-77B5EF34A652}.MemoryClient.Web-Release|Any CPU.ActiveCfg = MemoryClient.Web-Release|Any CPU
+		{F065ED64-3C7A-48A7-A859-77B5EF34A652}.MemoryClient.Web-Release|Any CPU.Build.0 = MemoryClient.Web-Release|Any CPU
+		{F065ED64-3C7A-48A7-A859-77B5EF34A652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F065ED64-3C7A-48A7-A859-77B5EF34A652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C8A268-17B5-4EAC-A9EB-450F75A3CDF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C8A268-17B5-4EAC-A9EB-450F75A3CDF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C8A268-17B5-4EAC-A9EB-450F75A3CDF9}.MemoryApi|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C8A268-17B5-4EAC-A9EB-450F75A3CDF9}.MemoryApi|Any CPU.Build.0 = Debug|Any CPU
+		{69C8A268-17B5-4EAC-A9EB-450F75A3CDF9}.MemoryClient.Web-Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C8A268-17B5-4EAC-A9EB-450F75A3CDF9}.MemoryClient.Web-Release|Any CPU.Build.0 = Release|Any CPU
+		{69C8A268-17B5-4EAC-A9EB-450F75A3CDF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C8A268-17B5-4EAC-A9EB-450F75A3CDF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E82AFF3-1A97-44C4-9E84-034BCECFFFC0}
+	EndGlobalSection
+EndGlobal

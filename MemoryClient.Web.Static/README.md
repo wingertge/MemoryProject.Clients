@@ -1,0 +1,3 @@
+﻿# MemoryClient.Web.Static
+
+

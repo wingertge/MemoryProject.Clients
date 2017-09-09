@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <base href="~/" />
+
+    <link rel="stylesheet" href="{{CDN_HOST}}/css/vendor.css" />
+    <link rel="stylesheet" href="{{CDN_HOST}}/css/site.css" />
+</head>
+<body>
+
+<form method="post" action="/login">
+    <div class="form-group">
+        <label for="identifier">Email/Username</label>
+        <input type="text" name="identifier" placeholder="E-Mail" />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Login" />
+        <a href="/register">Register</a>
+    </div>
+</form>
+
+<script src="{{CDN_HOST}}/js/vendor.js"></script>
+</body>
+</html>
