@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True"
+	xmlns:local="clr-namespace:MemoryClient.Mobile.Views;assembly=MemoryClient.Mobile"
+    x:Class="MemoryClient.Mobile.Views.Dashboard"
+    Title="Dashboard">
+
+
+
+	  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+          <Label Text="Dashboard" VerticalOptions="Center" HorizontalOptions="Center" />
+		          <Button Text="Review" Command="{Binding Path=NavigateCommand}" CommandParameter="NavigationPage/Review" />
+          <Button Text="Lesson List" Command="{Binding Path=NavigateCommand}" CommandParameter="NavigationPage/LessonList" />
+          <Button Text="Lesson Set" Command="{Binding Path=NavigateCommand}" CommandParameter="NavigationPage/LessonSet" />
+          <Button Text="Account" Command="{Binding Path=NavigateCommand}" CommandParameter="Account" />
+	  </StackLayout>
+    
+
+</ContentPage>
+

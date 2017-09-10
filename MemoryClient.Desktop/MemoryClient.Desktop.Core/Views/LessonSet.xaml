@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage 
+	xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True"
+	xmlns:local="clr-namespace:MemoryClient.Desktop.Views;assembly=MemoryClient.Desktop.Core..NETPortable,Version=v4.5,Profile=Profile259"
+    x:Class="MemoryClient.Desktop.Views.LessonSet"
+    Title="Lesson Set">
+
+
+
+
+	<NavigationPage Title="Lesson">
+	    <x:Arguments>
+			<local:Lesson />
+	    </x:Arguments>
+	</NavigationPage>
+		
+	  
+
+</TabbedPage>
+
