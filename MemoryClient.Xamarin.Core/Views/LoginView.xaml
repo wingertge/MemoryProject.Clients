@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:MemoryClient.Xamarin.Localization"
+             x:Class="MemoryClient.Xamarin.Views.LoginView">
+    <ContentView.Content>
+        <StackLayout>
+            <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="{i18n:Translate IdentifierLabel}" />
+            <Entry x:Name="Identifier" Text="{Binding Identifier}" />
+            <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="{i18n:Translate PasswordLabel}" />
+            <Entry x:Name="Password" Text="{Binding Password}" IsPassword="True" />
+            <Grid>
+                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="{i18n:Translate StayLoggedInLabel}" />
+                <Switch HorizontalOptions="End" Margin="0, 0, 8, 0" />
+            </Grid>
+
+            <Button Text="{i18n:Translate LoginButton}" Margin="0, 5, 0, 0" />
+            <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="RoyalBlue" Text="{i18n:Translate RegisterLink}" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

@@ -1,13 +1,9 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 using Autofac;
-using Prism.Autofac.Forms;
+using MemoryClient.Desktop;
+using Prism.Autofac;
 
 namespace MemoryClient.Mobile.Droid
 {
@@ -28,9 +24,9 @@ namespace MemoryClient.Mobile.Droid
 
     public class AndroidInitializer : IPlatformInitializer
     {
-        public void RegisterTypes(IContainer container)
+        public void RegisterTypes(ContainerBuilder container)
         {
-
+            
         }
     }
 }

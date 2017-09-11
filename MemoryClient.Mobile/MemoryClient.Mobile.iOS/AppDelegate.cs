@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Foundation;
+﻿using Foundation;
 using UIKit;
 using Autofac;
-using Prism.Autofac.Forms;
+using MemoryClient.Desktop;
+using Prism.Autofac;
 
 namespace MemoryClient.Mobile.iOS
 {
@@ -32,9 +30,9 @@ namespace MemoryClient.Mobile.iOS
 
     public class iOSInitializer : IPlatformInitializer
     {
-        public void RegisterTypes(IContainer container)
+        public void RegisterTypes(ContainerBuilder container)
         {
-
+            
         }
     }
 

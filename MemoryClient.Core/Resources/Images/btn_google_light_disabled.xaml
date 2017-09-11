@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file is compatible with Silverlight-->
+
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Name="svg3749" Width="46" Height="46">
+  <Canvas.RenderTransform>
+    <TranslateTransform X="0" Y="0"/>
+  </Canvas.RenderTransform>
+  <Canvas.Resources>
+    <Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="0" Canvas.Top="0" Width="40" Height="40" RadiusX="2" RadiusY="2" Name="path1" Fill="#000000" x:Key="path-1"/>
+  </Canvas.Resources>
+  <!--Unknown tag: metadata-->
+  <!--Unknown tag: sodipodi:namedview-->
+  <Canvas Name="GoogleButton">
+    <Canvas Name="9PATCH">
+      <Canvas.RenderTransform>
+        <TranslateTransform X="-788.000000" Y="-160.000000"/>
+      </Canvas.RenderTransform>
+    </Canvas>
+    <Canvas Name="btn_google_light_disabled">
+      <Canvas.RenderTransform>
+        <TranslateTransform X="-1.000000" Y="-1.000000"/>
+      </Canvas.RenderTransform>
+      <Canvas Name="button">
+        <Canvas.RenderTransform>
+          <TranslateTransform X="4.000000" Y="4.000000"/>
+        </Canvas.RenderTransform>
+        <Canvas Name="buttonbg"/>
+      </Canvas>
+      <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="ShapeCopy" Fill="#66000000" StrokeThickness="1" Data="M24.001 25.71 L24.001 22.362 L32.425 22.362 C32.551 22.929 32.65 23.46 32.65 24.207 C32.65 29.346 29.203 33 24.01 33 C19.042 33 15.01 28.968 15.01 24 C15.01 19.032 19.042 15 24.01 15 C26.44 15 28.474 15.891 30.031 17.349 L27.475 19.833 C26.827 19.221 25.693 18.501 24.01 18.501 C21.031 18.501 18.601 20.976 18.601 24.009 C18.601 27.042 21.031 29.517 24.01 29.517 C27.457 29.517 28.726 27.132 28.96 25.719 L24.001 25.719 L24.001 25.71 Z"/>
+      <Canvas Name="handles_square"/>
+    </Canvas>
+  </Canvas>
+</Canvas>

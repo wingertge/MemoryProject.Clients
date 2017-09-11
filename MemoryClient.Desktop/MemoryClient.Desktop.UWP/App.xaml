@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="PrismAutofacApp1.UWP.App"
+    x:Class="MemoryClient.Desktop.UWP.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:PrismAutofacApp1.UWP"
+    xmlns:local="using:MemoryClient.Desktop.UWP"
     RequestedTheme="Light">
 
 </Application>

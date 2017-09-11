@@ -1,0 +1,68 @@
+﻿<UserControl
+             xmlns:dxvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MemoryClient.Desktop.WPF.Views;assembly=MemoryClient.Desktop.WPF"
+             xmlns:viewModels="clr-namespace:MemoryClient.Desktop.WPF.ViewModels"
+             xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="MemoryClient.Desktop.WPF.Views.LoginView"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             mc:Ignorable="d"
+             DataContext="{dxvvm:ViewModelSource Type={x:Type viewModels:WpfLoginModel}}"
+             d:DesignHeight="180" d:DesignWidth="350">
+    <UserControl.Resources>
+        <Style x:Key="RobotoFont">
+            <Setter Property="TextElement.FontFamily" Value="/MemoryClient.Desktop.WPF;component/Resources/Fonts/#Roboto Medium" />
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid>
+
+        <dxlc:LayoutControl Orientation="Horizontal">
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutGroup x:Name="LayoutGroup" Orientation="Vertical" VerticalAlignment="Top">
+                    <dxlc:LayoutItem IsRequired="True" Label="Email/Username:" LabelPosition="Top">
+                        <dxe:TextEdit MinWidth="200"/>
+                    </dxlc:LayoutItem>
+                    <dxlc:LayoutItem IsRequired="True" Label="Password:" LabelPosition="Top">
+                        <dxe:TextEdit MinWidth="200"/>
+                    </dxlc:LayoutItem>
+                    <dxlc:LayoutItem Label="Stay logged in?" LabelPosition="Left">
+                        <dxe:CheckEdit HorizontalAlignment="Right"></dxe:CheckEdit>
+                    </dxlc:LayoutItem>
+                    <dxlc:LayoutGroup>
+                        <dxlc:LayoutItem VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock FontSize="10px" Foreground="DodgerBlue" TextDecorations="Underline">Don't have an account? Register</TextBlock>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem>
+                            <dx:SimpleButton Content="Login"></dx:SimpleButton>
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutGroup>
+                </dxlc:LayoutGroup>
+            </dxlc:LayoutGroup>
+            <dxlc:LayoutGroup Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <dxlc:LayoutItem>
+                    <dx:SimpleButton>
+                        <dx:SimpleButton.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Width="18" Height="18" Source="../Resources/Images/btn_google_light_normal_ios.svg"></Image>
+                                <TextBlock TextAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource RobotoFont}">Sign in with Google</TextBlock>
+                            </StackPanel>
+                        </dx:SimpleButton.Content>
+                    </dx:SimpleButton>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem>
+                    <dx:SimpleButton Content="Facebook"></dx:SimpleButton>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem>
+                    <dx:SimpleButton Content="Twitter"></dx:SimpleButton>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem>
+                    <dx:SimpleButton Content="Microsoft"></dx:SimpleButton>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+        </dxlc:LayoutControl>
+
+    </Grid>
+</UserControl>
