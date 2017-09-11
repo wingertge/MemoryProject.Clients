@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="e9f2785b-9a44-4365-bac5-7ced311a229b"
+    Name="9464da5f-24b0-4bdf-a433-eb385fc41fea"
     Publisher="CN=winge"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="e9f2785b-9a44-4365-bac5-7ced311a229b" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="9464da5f-24b0-4bdf-a433-eb385fc41fea" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>PrismAutofacApp1.UWP</DisplayName>
+    <DisplayName>MemoryClient.Desktop.UWP</DisplayName>
     <PublisherDisplayName>winge</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="PrismAutofacApp1.UWP.App">
+      EntryPoint="MemoryClient.Desktop.UWP.App">
       <uap:VisualElements
-        DisplayName="PrismAutofacApp1.UWP"
+        DisplayName="MemoryClient.Desktop.UWP"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="PrismAutofacApp1.UWP"
+        Description="MemoryClient.Desktop.UWP"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

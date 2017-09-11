@@ -1,10 +1,10 @@
 ﻿using Autofac;
 using Prism.Autofac;
 using Prism.Autofac.Forms;
-using MemoryClient.Mobile.Views;
+using MemoryClient.Desktop.Views;
 using Xamarin.Forms;
 
-namespace MemoryClient.Mobile
+namespace MemoryClient.Desktop
 {
     public partial class App : PrismApplication
     {
@@ -14,7 +14,7 @@ namespace MemoryClient.Mobile
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("NavigationPage/MainPage?title=Hello%20from%20Xamarin.Forms");
+            NavigationService.NavigateAsync("NavigationPage/MainPage");
         }
 
         protected override void RegisterTypes()

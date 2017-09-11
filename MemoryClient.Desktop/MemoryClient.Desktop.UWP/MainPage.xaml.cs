@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using Autofac;
 using Prism.Autofac.Forms;
 
-namespace PrismAutofacApp1.UWP
+namespace MemoryClient.Desktop.UWP
 {
     public sealed partial class MainPage
     {
@@ -23,7 +23,7 @@ namespace PrismAutofacApp1.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new PrismAutofacApp1.App(new UwpInitializer()));
+            LoadApplication(new MemoryClient.Desktop.App(new UwpInitializer()));
         }
     }
 

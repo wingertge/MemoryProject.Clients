@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9749DD7A-6056-408F-A15D-7A3EC10B5D62}</ProjectGuid>
+    <ProjectGuid>{9DFAC6B3-8181-4342-B2A0-E32075A45EF1}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -133,9 +133,8 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MemoryClient.Mobile\MemoryClient.Mobile.Core.csproj">
-      <Name>MemoryClient.Mobile.Core</Name>
-      <Project>{BDBF849B-EF45-4609-81BD-A3C04AC6A983}</Project>
+    <ProjectReference Include="..\MemoryClient.Mobile\MemoryClient.Mobile.csproj">
+      <Name>MemoryClient.Mobile</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="9726eb0a-d0de-4a62-a364-da659ec1a60b"
+    Name="15f2bfc5-5390-41ab-b095-e72742945559"
     Publisher="CN=winge"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="9726eb0a-d0de-4a62-a364-da659ec1a60b" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="15f2bfc5-5390-41ab-b095-e72742945559" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>MemoryClient.Mobile.UWP</DisplayName>

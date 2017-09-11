@@ -4,20 +4,20 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{E72A3672-2AC0-4BBF-BED5-A377717D3560}</ProjectGuid>
+    <ProjectGuid>{F681C236-3C72-465C-9F65-386E4D7AD6F6}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PrismAutofacApp1.UWP</RootNamespace>
-    <AssemblyName>PrismAutofacApp1.UWP</AssemblyName>
+    <RootNamespace>MemoryClient.Desktop.UWP</RootNamespace>
+    <AssemblyName>MemoryClient.Desktop.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.15063.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
+    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>PrismAutofacApp1.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>MemoryClient.Desktop.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
@@ -105,7 +105,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="PrismAutofacApp1.UWP_TemporaryKey.pfx" />
+    <None Include="MemoryClient.Desktop.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />
@@ -128,9 +128,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MemoryClient.Desktop.Core\MemoryClient.Desktop.Core.csproj">
-      <Name>MemoryClient.Desktop.Core</Name>
-      <Project>{5A6CF72E-F8F1-4A09-945D-21B952A31F9E}</Project>
+    <ProjectReference Include="..\..\MemoryClient.Xamarin\MemoryClient.Xamarin.csproj">
+      <Project>{e87dd65a-1104-4170-ae75-bb322769aa51}</Project>
+      <Name>MemoryClient.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MemoryClient.Desktop\MemoryClient.Desktop.csproj">
+      <Name>MemoryClient.Desktop</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
