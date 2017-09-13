@@ -9,11 +9,13 @@ namespace MemoryClient.Desktop.ViewModels
 {
     public class MainPageViewModel : BindableBase, INavigationAware
     {
+        public readonly ProviderLoginViewModel ProviderLoginModel = new ProviderLoginViewModel();
+
         private string _title;
         public string Title
         {
-            get { return _title; }
-            set { SetProperty(ref _title, value); }
+            get => _title;
+            set => SetProperty(ref _title, value);
         }
 
         public MainPageViewModel()

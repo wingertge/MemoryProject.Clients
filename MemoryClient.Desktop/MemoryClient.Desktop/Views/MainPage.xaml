@@ -7,6 +7,6 @@
              x:Class="MemoryClient.Desktop.Views.MainPage"
              Title="MainPage">
   <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-      <views:LoginView />
+      <views:ProviderLoginView />
   </StackLayout>
 </ContentPage>

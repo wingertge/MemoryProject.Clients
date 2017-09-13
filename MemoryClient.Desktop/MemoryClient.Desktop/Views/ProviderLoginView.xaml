@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:MemoryClient.Xam.Core.Localization;assembly=MemoryClient.Xam.Core"
+             xmlns:nControl="clr-namespace:TwinTechsForms.NControl;assembly=TwinTechsForms.NControl.SvgImageView"
+             x:Class="MemoryClient.Desktop.Views.ProviderLoginView">
+  <ContentView.Content>
+      <StackLayout BindingContext="">
+            <Button HorizontalOptions="Center" BorderColor="White" BorderRadius="2" Height="40">
+                <nControl:SvgImageView SvgAssembly="{Binding SvgAssembly}" SvgPath="MemoryClient.Desktop.Resources.google_logo.svg" WidthRequest="18" HeightRequest="18" />
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="{i18n:Translate Text=GoogleSignInLabel}">
+                  <Label.FontFamily>
+                      <OnPlatform x:TypeArguments="x:String">
+                          <On Platform="iOS">Roboto-Medium</On>
+                          <On Platform="Android">Roboto-Medium</On>
+                          <On Platform="Windows">Resources/Fonts/Roboto-Medium.ttf#Roboto</On>
+                      </OnPlatform>
+                  </Label.FontFamily>
+              </Label>
+          </Button>
+      </StackLayout>
+  </ContentView.Content>
+</ContentView>

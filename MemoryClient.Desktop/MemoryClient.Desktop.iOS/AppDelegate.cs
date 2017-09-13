@@ -5,6 +5,7 @@ using Foundation;
 using UIKit;
 using Autofac;
 using Prism.Autofac.Forms;
+using TwinTechsForms.NControl.iOS;
 
 namespace MemoryClient.Desktop.iOS
 {
@@ -24,6 +25,7 @@ namespace MemoryClient.Desktop.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            SvgImageViewRenderer.Init();
             LoadApplication(new App(new iOSInitializer()));
 
             return base.FinishedLaunching(app, options);

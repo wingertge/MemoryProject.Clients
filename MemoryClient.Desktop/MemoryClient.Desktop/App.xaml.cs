@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using MemoryClient.Desktop.ViewModels;
 using Prism.Autofac;
 using Prism.Autofac.Forms;
 using MemoryClient.Desktop.Views;
@@ -20,7 +21,7 @@ namespace MemoryClient.Desktop
         protected override void RegisterTypes()
         {
             Container.RegisterTypeForNavigation<NavigationPage>();
-            Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigation<MainPage, MainPageViewModel>();
         }
     }
 }
