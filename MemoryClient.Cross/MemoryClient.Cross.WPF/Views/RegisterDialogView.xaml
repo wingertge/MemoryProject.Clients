@@ -1,0 +1,39 @@
+﻿<views:MvxWindow x:Class="MemoryClient.Cross.WPF.Views.RegisterDialogView"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                xmlns:local="clr-namespace:MemoryClient.Cross.WPF.Views"
+                xmlns:viewModels="clr-namespace:MemoryClient.Cross.Core.ViewModels;assembly=MemoryClient.Cross.Core"
+                xmlns:mvx="clr-namespace:MvvmCross.Binding.Wpf;assembly=MvvmCross.Binding.Wpf"
+                xmlns:views="clr-namespace:MvvmCross.Wpf.Views;assembly=MvvmCross.Wpf"
+                xmlns:components="clr-namespace:MemoryClient.Cross.WPF.Components"
+                SizeToContent="WidthAndHeight"
+                mc:Ignorable="d"
+                Title="Register"
+                mvx:La.ng="Title Title"
+                 MinWidth="250">
+
+    <Grid Margin="8">
+        <StackPanel>
+            <TextBlock mvx:La.ng="Text ProviderText" mvx:Bi.nd="Visible IsProvider" Visibility="Collapsed" />
+            <TextBlock mvx:La.ng="Text EmailLabel" Text="Email:" mvx:Bi.nd="Visible !IsProvider" />
+            <components:ValidatedTextBox mvx:Bi.nd="Text Email, Mode=TwoWay; Visible !IsProvider; ErrorValidator EmailValidator; IsValid EmailValid" />
+            <TextBlock mvx:La.ng="Text UsernameLabel" Text="Username:" />
+            <components:ValidatedTextBox mvx:Bi.nd="Text Username, Mode=TwoWay; ErrorValidator UsernameValidator; IsValid UsernameValid" />
+            <TextBlock mvx:La.ng="Text PasswordLabel" Text="Password:" />
+            <components:ValidatedPasswordBox mvx:Bi.nd="Text Password, Mode=TwoWay; ErrorValidator PasswordErrorValidator; WarningValidator PasswordWarningValidator; IsValid PasswordValid" x:Name="PasswordBox" />
+            <TextBlock mvx:La.ng="Text PasswordAgainLabel" Text="Confirm Password:" />
+            <components:ValidatedPasswordBox mvx:Bi.nd="Text PasswordAgain, Mode=TwoWay; ErrorValidator PasswordAgainValidator; IsValid PasswordAgainValid" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="Cancel" mvx:La.ng="CancelButton" mvx:Bi.nd="Command CancelCommand" Margin="0 6 3 0" />
+                <Button Grid.Column="1" Content="Register" mvx:La.ng="RegisterButton" mvx:Bi.nd="Command RegisterCommand; Active FormValid" Margin="3 6 0 0" />
+            </Grid>
+        </StackPanel>
+    </Grid>
+</views:MvxWindow>
+

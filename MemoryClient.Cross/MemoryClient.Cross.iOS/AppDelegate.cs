@@ -2,6 +2,7 @@
 using MvvmCross.iOS.Platform;
 using MvvmCross.Platform;
 using Foundation;
+using Microsoft.Identity.Client;
 using UIKit;
 
 namespace MemoryClient.Cross.iOS
@@ -27,6 +28,12 @@ namespace MemoryClient.Cross.iOS
 
             Window.MakeKeyAndVisible();
 
+            return true;
+        }
+
+        public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
+        {
+            AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(url);
             return true;
         }
     }

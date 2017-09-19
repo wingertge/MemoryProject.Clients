@@ -1,6 +1,8 @@
+using Acr.UserDialogs;
 using Android.Content;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Droid.Views;
 using MvvmCross.Platform.Platform;
 
 namespace MemoryClient.Cross.Droid

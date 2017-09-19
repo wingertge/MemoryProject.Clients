@@ -1,16 +1,24 @@
 ﻿using System.Threading.Tasks;
+using Acr.UserDialogs;
 using MemoryApi.HttpClient;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Localization;
+using MvvmCross.Platform;
 
 namespace MemoryClient.Cross.Core.ViewModels
 {
-    public class LoadingScreenViewModel : MvxViewModel
+    /// <summary>
+    /// View model for initialization/loading screen.
+    /// </summary>
+    /// <seealso cref="AppViewModel" />
+    public class LoadingScreenViewModel : AppViewModel
     {
         private readonly IAuthClient _authClient;
         private readonly IApplicationSettings _settings;
         private readonly IMvxNavigationService _navigation;
 
+        /// <inheritdoc />
         public LoadingScreenViewModel(IAuthClient authClient, IApplicationSettings settings, IMvxNavigationService navigation)
         {
             _authClient = authClient;
@@ -18,12 +26,14 @@ namespace MemoryClient.Cross.Core.ViewModels
             _navigation = navigation;
         }
 
-        public async Task ViewDidAppear()
+        /// <inheritdoc />
+        public override async void Start()
         {
             var authToken = _settings.AuthToken;
             if (string.IsNullOrEmpty(authToken))
             {
-                ShowViewModel<LoginDialogViewModel>();
+                await _navigation.Navigate(typeof(LoginDialogViewModel));
+                return;
             }
 
             try
@@ -34,7 +44,9 @@ namespace MemoryClient.Cross.Core.ViewModels
             catch (SwaggerException<string> e)
             {
                 _settings.AuthToken = null;
-                //await _navigation.Navigate<ErrorModalViewModel>();
+                var localization = Mvx.Resolve<IMvxTextProvider>();
+                await Mvx.Resolve<IUserDialogs>().AlertAsync($"{e.Data}\n\n{localization.GetText("", "LoadingScreen", "ExceptionText")}", localization.GetText("", "LoadingScreen", "ExceptionTitle"));
+                Start();
             }
         }
     }

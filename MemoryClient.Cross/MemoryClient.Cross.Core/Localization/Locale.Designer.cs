@@ -62,20 +62,146 @@ namespace MemoryClient.Cross.Core.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email/Username:.
+        ///   Looks up a localized string similar to Please try logging in again..
         /// </summary>
-        internal static string IdentifierLabel {
+        internal static string LoadingScreen_ExceptionText {
             get {
-                return ResourceManager.GetString("IdentifierLabel", resourceCulture);
+                return ResourceManager.GetString("LoadingScreen.ExceptionText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2.
+        ///   Looks up a localized string similar to Exception while authenticating.
         /// </summary>
-        internal static string PasswordLabel {
+        internal static string LoadingScreen_ExceptionTitle {
             get {
-                return ResourceManager.GetString("PasswordLabel", resourceCulture);
+                return ResourceManager.GetString("LoadingScreen.ExceptionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email/Username:.
+        /// </summary>
+        internal static string LoginDialog_IdentifierLabel {
+            get {
+                return ResourceManager.GetString("LoginDialog.IdentifierLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        internal static string LoginDialog_LoginButton {
+            get {
+                return ResourceManager.GetString("LoginDialog.LoginButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password:.
+        /// </summary>
+        internal static string LoginDialog_PasswordLabel {
+            get {
+                return ResourceManager.GetString("LoginDialog.PasswordLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Don&apos;t have an account? Register.
+        /// </summary>
+        internal static string LoginDialog_RegisterLink {
+            get {
+                return ResourceManager.GetString("LoginDialog.RegisterLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stay logged in?.
+        /// </summary>
+        internal static string LoginDialog_StayLoggedInLabel {
+            get {
+                return ResourceManager.GetString("LoginDialog.StayLoggedInLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        internal static string LoginDialog_Title {
+            get {
+                return ResourceManager.GetString("LoginDialog.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string RegisterDialog_Cancel {
+            get {
+                return ResourceManager.GetString("RegisterDialog.Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email:.
+        /// </summary>
+        internal static string RegisterDialog_EmailLabel {
+            get {
+                return ResourceManager.GetString("RegisterDialog.EmailLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm Password:.
+        /// </summary>
+        internal static string RegisterDialog_PasswordAgainLabel {
+            get {
+                return ResourceManager.GetString("RegisterDialog.PasswordAgainLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password:.
+        /// </summary>
+        internal static string RegisterDialog_PasswordLabel {
+            get {
+                return ResourceManager.GetString("RegisterDialog.PasswordLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Just one step left! Enter a username and password for the site below. You can use the password or {0} to sign in in the future..
+        /// </summary>
+        internal static string RegisterDialog_ProviderText {
+            get {
+                return ResourceManager.GetString("RegisterDialog.ProviderText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        internal static string RegisterDialog_RegisterButton {
+            get {
+                return ResourceManager.GetString("RegisterDialog.RegisterButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        internal static string RegisterDialog_Title {
+            get {
+                return ResourceManager.GetString("RegisterDialog.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username:.
+        /// </summary>
+        internal static string RegisterDialog_UsernameLabel {
+            get {
+                return ResourceManager.GetString("RegisterDialog.UsernameLabel", resourceCulture);
             }
         }
     }

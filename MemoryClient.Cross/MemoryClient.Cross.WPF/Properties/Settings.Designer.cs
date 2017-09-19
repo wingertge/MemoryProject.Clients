@@ -46,5 +46,29 @@ namespace MemoryClient.Cross.WPF.Properties {
                 this["StayLoggedIn"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LastProviderToken {
+            get {
+                return ((string)(this["LastProviderToken"]));
+            }
+            set {
+                this["LastProviderToken"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LastIdentifier {
+            get {
+                return ((string)(this["LastIdentifier"]));
+            }
+            set {
+                this["LastIdentifier"] = value;
+            }
+        }
     }
 }

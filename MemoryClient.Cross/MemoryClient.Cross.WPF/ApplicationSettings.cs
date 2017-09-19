@@ -7,6 +7,8 @@ namespace MemoryClient.Cross.WPF
     {
         private string _authToken;
         private bool _stayLoggedIn;
+        private string _lastProviderToken;
+        private string _lastIdentifier;
 
         public string AuthToken
         {
@@ -14,7 +16,7 @@ namespace MemoryClient.Cross.WPF
             set
             {
                 _authToken = value;
-                if(_stayLoggedIn) _localSettings.Values[nameof(AuthToken)] = value;
+                if (_stayLoggedIn) Settings.Default.AuthToken = value;
             }
         }
 
@@ -24,16 +26,28 @@ namespace MemoryClient.Cross.WPF
             set
             {
                 _stayLoggedIn = value;
-                _localSettings.Values[nameof(StayLoggedIn)] = value;
+                Settings.Default.StayLoggedIn = value;
             }
         }
 
-        public ApplicationSettings()
+        public string LastProviderToken
         {
-            _localSettings = ApplicationData.Current.LocalSettings;
+            get => _lastProviderToken;
+            set
+            {
+                _lastProviderToken = value;
+                Settings.Default.LastProviderToken = value;
+            }
+        }
 
-            _authToken = _localSettings.Values[nameof(AuthToken)] as string;
-            _stayLoggedIn = _localSettings.Values[nameof(StayLoggedIn)] as bool? ?? false;
+        public string LastIdentifier
+        {
+            get => _lastIdentifier;
+            set
+            {
+                _lastIdentifier = value;
+                Settings.Default.LastIdentifier = value;
+            }
         }
 
         public void CleanUp()

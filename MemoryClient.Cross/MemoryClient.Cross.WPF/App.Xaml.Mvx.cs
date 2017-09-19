@@ -4,6 +4,7 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Wpf.Views.Presenters;
 using MemoryClient.Cross.Core;
+using Microsoft.Identity.Client;
 
 namespace MemoryClient.Cross.WPF
 {
@@ -15,12 +16,14 @@ namespace MemoryClient.Cross.WPF
         {
             LoadMvxAssemblyResources();
 
-            RegisterPlatformTypes();
+            var presenter = new MvxWpfViewPresenter(MainWindow);
 
-            var presenter = new MvxSimpleWpfViewPresenter(MainWindow);
+            Core.App.UIParent = new UIParent(MainWindow);
 
             var setup = new Setup(Dispatcher, presenter);
             setup.Initialize();
+
+            RegisterPlatformTypes();
 
             var start = Mvx.Resolve<IMvxAppStart>();
             start.Start();
@@ -28,7 +31,7 @@ namespace MemoryClient.Cross.WPF
             _setupComplete = true;
         }
 
-        private void RegisterPlatformTypes()
+        private static void RegisterPlatformTypes()
         {
             Mvx.RegisterType<IApplicationSettings, ApplicationSettings>();
         }
@@ -41,6 +44,12 @@ namespace MemoryClient.Cross.WPF
             }
 
             base.OnActivated(e);
+        }
+
+        protected override void OnExit(ExitEventArgs e)
+        {
+            Mvx.Resolve<IApplicationSettings>().CleanUp();
+            base.OnExit(e);
         }
 
         private void LoadMvxAssemblyResources()
