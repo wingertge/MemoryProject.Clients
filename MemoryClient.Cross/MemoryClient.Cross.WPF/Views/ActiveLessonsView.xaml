@@ -1,0 +1,64 @@
+﻿<views:MvxWindow x:Class="MemoryClient.Cross.WPF.Views.ActiveLessonsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemoryClient.Cross.WPF.Components"
+        xmlns:views="clr-namespace:MvvmCross.Wpf.Views;assembly=MvvmCross.Wpf"
+        xmlns:mvx="clr-namespace:MvvmCross.Binding.Wpf;assembly=MvvmCross.Binding.Wpf"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Height="300" Width="300">
+    <Grid>
+        <Grid Grid.Row="0" Grid.Column="0" ZIndex="10" Visibility="Hidden" mvx:Bi.nd="Visible IsBusy">
+            <local:Spinner />
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="Add" Padding="12 6 12 6" Margin="2" mvx:La.ng="Content AddButton" mvx:Bi.nd="Command AddLessonCmd"/>
+                <Button Grid.Column="1" Content="Delete" Padding="12 6 12 6" Margin="2" mvx:La.ng="Content DeleteButton" mvx:Bi.nd="Command DeleteLessonCmd" />
+                <ComboBox Grid.Column="2" Margin="2" mvx:Bi.nd="ItemsSource Languages" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding LocalizedName}" />
+                                <TextBlock Text=" (" />
+                                <TextBlock Text="{Binding LocalizedCountryName}" />
+                                <TextBlock Text=")" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </Grid>
+            <DataGrid Grid.Row="1" mvx:Bi.nd="ItemsSource Lessons; Visible ShowLessons">
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Binding="{Binding Checked}" />
+                    <DataGridTextColumn Binding="{Binding From}" Header="From" mvx:La.ng="Header FromHeader"/>
+                    <DataGridTextColumn Binding="{Binding Pronunciation}" Header="Pronunciation" mvx:La.ng="Header PronunciationHeader" mvx:Bi.nd="Visible ShowPronunciation" />
+                    <DataGridTextColumn Binding="{Binding To}" Header="To" mvx:La.ng="Header ToHeader" />
+                    <DataGridTemplateColumn Header="Manage" mvx:La.ng="Header ManageHeader">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Content="Edit" mvx:La.ng="Content EditButton" mvx:Bi.nd="EditLessonCmd" />
+                                    <Button Content="Delete" mvx:La.ng="Content DeleteButton" mvx:Bi.nd="DeleteLessonCmd" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</views:MvxWindow>
+

@@ -1,0 +1,91 @@
+﻿<views:MvxWindow x:Class="MemoryClient.Cross.WPF.Views.LessonEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemoryClient.Cross.WPF.Views"
+        xmlns:views="clr-namespace:MvvmCross.Wpf.Views;assembly=MvvmCross.Wpf"
+        xmlns:mvx="clr-namespace:MvvmCross.Binding.Wpf;assembly=MvvmCross.Binding.Wpf"
+        xmlns:components="clr-namespace:MemoryClient.Cross.WPF.Components"
+        mc:Ignorable="d"
+        Title="LessonEditor" Height="300" Width="300">
+
+    <Grid>
+        <Grid Grid.Row="0" Visibility="Hidden" mvx:Bi.nd="Visible IsBusy">
+            <components:Spinner />
+        </Grid>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <ComboBox mvx:Bi.nd="ItemsSource LanguagesFrom">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding LocalizedName}" />
+                                <TextBlock Text=" (" />
+                                <TextBlock Text="{Binding LocalizedCountryName}" />
+                                <TextBlock Text=")" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <ComboBox Grid.Column="1" mvx:Bi.nd="ItemsSource LanguagesFrom">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding LocalizedName}" />
+                                <TextBlock Text=" (" />
+                                <TextBlock Text="{Binding LocalizedCountryName}" />
+                                <TextBlock Text=")" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </Grid>
+            
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                
+                <StackPanel>
+                    <Label Content="From" mvx:Bi.nd="Content Language(SelectedLangFrom)" />
+                    <TextBox />
+                </StackPanel>
+                
+                <StackPanel Grid.Row="1" mvx:Bi.nd="Visible ShowPronunciation">
+                    <Label Content="Pronunciation" mvx:La.ng="Content PronunciationLabel" />
+                    <TextBox />
+                </StackPanel>
+                
+                <StackPanel Grid.Row="2">
+                    <Label Content="To" mvx:Bi.nd="Content Language(SelectedLangTo)" />
+                    <TextBox />
+                </StackPanel>
+                
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    
+                    <Button Content="Cancel" mvx:La.ng="CancelButton" />
+                    <Button Grid.Column="1" Content="Save" mvx:La.ng="SaveButton" />
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</views:MvxWindow>
+
